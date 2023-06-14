@@ -9,6 +9,10 @@ import { EmployeeListComponent } from './components/employee-list/employee-list.
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { RegisterCustomerComponent } from './components/register-customer/register-customer.component';
+import { LoginCustomerComponent } from './components/login-customer/login-customer.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeCreateComponent,
     EmployeeEditComponent,
     EmployeeListComponent,
+    HeaderComponent,
+    FooterComponent,
+    RegisterCustomerComponent,
+    LoginCustomerComponent,
   ],
   imports: [
     BrowserModule,
