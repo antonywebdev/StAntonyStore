@@ -22,6 +22,21 @@ export class customerService {
     let url = `${this.baseUri}/createCustomer`;
     return this.http.post(url, data).pipe(catchError(this.errorMgmt));
   }
+  // Login form
+
+  loginCustomer(loginForm): Observable<any> {
+    console.log('customer service',loginForm);
+    let url = `${this.baseUri}/read/${loginForm.email}/${loginForm.password}`;
+    return this.http.get(url, { headers: this.headers }).pipe(
+      map((res: Response) => {
+        console.log('Servie resresres',res);
+        return res || {};
+      }),
+      catchError(this.errorMgmt)
+    );
+  }
+
+
 
   // Error handling
   errorMgmt(error: HttpErrorResponse) {
